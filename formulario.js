@@ -2,7 +2,7 @@ var formulario = document.querySelector("#form")
 
 formulario.onsubmit = function(e) {
 
-  e.prevent();
+  e.preventDefault(); // Se le agrega Default para prevenir el compoortamiento predeterminado del formulario
   
   var n = formulario.elements[0]
   var e = formulario.elements[1]
@@ -55,7 +55,7 @@ function agregarInvitado(nombre, edad, nacionalidad) {
 var lista = document.getElementById("lista-de-invitados")
 
 var elementoLista = document.createElement("div")
-elementoLista.classList.added("elemento-lista")
+elementoLista.classList.add("elemento-lista") // Added  no es una forma correcta del método classList
 lista.appendChild(elementoLista)
 
 var spanNombre = document.createElement("span")
